@@ -12,6 +12,14 @@
 	</properties>
 
 	<dependencies>
+		<!-- http://mvnrepository.com/artifact/net.objecthunter/exp4j -->
+		<dependency>
+			<groupId>net.objecthunter</groupId>
+			<artifactId>exp4j</artifactId>
+			<version>0.4.6</version>
+		</dependency>
+
+
 		<dependency>
 			<groupId>opendial</groupId>
 			<artifactId>opendial</artifactId>

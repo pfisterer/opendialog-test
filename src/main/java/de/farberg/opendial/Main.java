@@ -1,6 +1,7 @@
 package de.farberg.opendial;
 
 import java.io.IOException;
+import java.util.Set;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -33,8 +34,13 @@ public class Main {
 
 		// Finally, start the system
 		system.startSystem();
-		
-		system.addUserInput("Hello Opendial");
+
+		Set<String> addUserInputResponse = system.addUserInput("Hello Opendial");
+		for (String entry : addUserInputResponse) {
+			log.info("Entry in response: {}, {}", entry, system.getContent(entry));
+		}
+
+		System.exit(0);
 	}
 
 }
