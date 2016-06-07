@@ -141,19 +141,6 @@
 		</repository>
 
 		<repository>
-			<id>atlassian-public</id>
-			<url>https://maven.atlassian.com/repository/public</url>
-			<snapshots>
-				<enabled>true</enabled>
-				<updatePolicy>never</updatePolicy>
-				<checksumPolicy>warn</checksumPolicy>
-			</snapshots>
-			<releases>
-				<enabled>true</enabled>
-				<checksumPolicy>warn</checksumPolicy>
-			</releases>
-		</repository>
-		<repository>
 			<id>jcenter</id>
 			<url>http://jcenter.bintray.com </url>
 			<snapshots>
@@ -167,5 +154,19 @@
 			</releases>
 		</repository>
 
+		<repository>
+			<id>atlassian-public</id>
+			<url>https://maven.atlassian.com/repository/public</url>
+			<snapshots>
+				<enabled>true</enabled>
+				<updatePolicy>never</updatePolicy>
+				<checksumPolicy>warn</checksumPolicy>
+			</snapshots>
+			<releases>
+				<enabled>true</enabled>
+				<checksumPolicy>warn</checksumPolicy>
+			</releases>
+		</repository>
+		
 	</repositories>
 </project>
