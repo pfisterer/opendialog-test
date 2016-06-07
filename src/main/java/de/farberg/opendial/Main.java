@@ -7,6 +7,9 @@ import org.slf4j.LoggerFactory;
 
 import de.uniluebeck.itm.util.logging.LogLevel;
 import de.uniluebeck.itm.util.logging.Logging;
+import opendial.DialogueSystem;
+import opendial.domains.Domain;
+import opendial.readers.XMLDomainReader;
 
 public class Main {
 
@@ -21,7 +24,17 @@ public class Main {
 		// Output a simple log statement
 		log.info("Hallo Welt!");
 
-		opendial.DialogueSystem.main(args);
+		// creating the dialogue system
+		Domain domain = XMLDomainReader.extractDomain("example.xml");
+		DialogueSystem system = new DialogueSystem(domain);
+
+		// When used as part of another application, we often want to switch off the OpenDial GUI
+		system.getSettings().showGUI = false;
+
+		// Finally, start the system
+		system.startSystem();
+		
+		system.addUserInput("Hello Opendial");
 	}
 
 }
